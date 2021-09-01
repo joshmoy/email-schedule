@@ -6,4 +6,4 @@ const { transporter, mailOptions } = require("./email");
 
 transporter.sendMail(mailOptions);
 
-app.listen(port, () => console.log(`Listening on port ${port}...`));
+app.listen(process.env.PORT || port, () => console.log(`Listening on port ${port}...`));
